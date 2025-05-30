@@ -2,7 +2,7 @@
 <html xmlns="http://www.thymeleaf.org">
 
 <head>
-	<title></title>
+	<title>Trang chủ | AE Store</title>
 	<link rel="icon" th:href="@{/image/img_layout/logo.png}" type="image/png">
 
 	<!--Bootstrap-->
@@ -14,7 +14,16 @@
 </head>
 
 <body>
+	<div th:replace="layout/_header :: header"></div>
+	<div th:replace="layout/_nav :: nav"></div>
+	<div th:replace="layout/_banner :: banner"></div>
 	
+	
+	<!--
+		NỘI DUNG CHÍNH
+	-->
+	
+	<div th:replace="layout/_footer :: footer"></div>
 </body>
 
 </html>
