@@ -37,22 +37,47 @@
 					<input class="form-check-input" type="checkbox" id="rememberMe">
 					<label class="form-check-label" for="rememberMe">Lưu thông tin</label>
 				</div>
-				<a href="#">Quên mật khẩu?</a>
+				<a href="#" data-bs-toggle="modal" data-bs-target="#forgotPasswordModal">Quên mật khẩu?</a>
 			</div>
 			<button type="submit" class="btn btn-outline-dark w-100">Đăng nhập</button>
 		</form>
 		<div class="text-center">
 			<div class="d-flex align-items-center my-3">
-			    <hr class="flex-grow-1">
-			    <span class="px-2 text-muted">Đăng nhập bằng</span>
-			    <hr class="flex-grow-1">
+				<hr class="flex-grow-1">
+				<span class="px-2 text-muted">Đăng nhập bằng</span>
+				<hr class="flex-grow-1">
 			</div>
-			
+
 			<button class="btn btn-outline-danger w-100 mb-2"><i class="bi bi-google"></i> Google</button>
 			<button class="btn btn-outline-primary w-100"><i class="bi bi-facebook"></i> Facebook</button>
 		</div>
 		<p class="text-center mt-3">Bạn chưa có tài khoản? <a th:href="@{/account/register}">Đăng ký</a></p>
 	</div>
+	</div>
+
+	<!-- Quên mật khẩu -->
+	<div class="modal fade" id="forgotPasswordModal" tabindex="-1" aria-labelledby="forgotPasswordLabel"
+		aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<form th:action="" method="">
+					<div class="modal-header">
+						<h5 class="modal-title" id="forgotPasswordLabel">LẤY LẠI MẬT KHẨU</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
+					</div>
+					<div class="modal-body">
+						<div class="mb-3">
+							<label for="email" class="form-label">Nhập email đã đăng ký</label>
+							<input type="email" class="form-control" id="email" name="email" placeholder="Email của bạn">
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="submit" class="btn btn-primary">Gửi yêu cầu</button>
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+					</div>
+				</form>
+			</div>
+		</div>
 	</div>
 </body>
 

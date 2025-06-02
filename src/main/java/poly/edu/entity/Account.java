@@ -1,0 +1,37 @@
+package poly.edu.entity;
+
+import java.io.Serializable;
+import java.util.List;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Entity
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Table(name = "Account")
+
+public class Account implements Serializable {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private String accountID;
+	private String email;
+    private String password;
+    private String fullName;
+    private String address;
+    private String role;
+    
+    @OneToMany(mappedBy = "account")
+    private List<Cart> carts;
+	
+    @OneToMany(mappedBy = "account")
+    private List<Orders> orders;
+}
