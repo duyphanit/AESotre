@@ -22,9 +22,12 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Orders implements Serializable{
+	
+	private static final long serialVersionUID = 1L;
+	
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String orderID;
+    private Long orderID;
 
     private LocalDate date;
     private String status;

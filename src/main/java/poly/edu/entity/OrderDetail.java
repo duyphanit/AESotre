@@ -19,11 +19,14 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @IdClass(OrderDetailId.class)
 public class OrderDetail implements Serializable {
+	
+	private static final long serialVersionUID = 1L;
+	
 	@Id
-	private String orderID;
+	private Long orderID;
 
 	@Id
-	private String productID;
+	private Long productID;
 
 	private Integer quantity;
 	private Double lastPrice;

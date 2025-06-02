@@ -21,9 +21,12 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 
 public class Cart implements Serializable{
+	
+	private static final long serialVersionUID = 1L;
+	
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String cartID;
+    private Long cartID;
 
     private LocalDate createdDate;
     

@@ -7,13 +7,13 @@
 
 
 <nav th:fragment="nav">
-	<div class="navbar navbar-dark bg-dark py-3">
-		<div class="css_navbar container d-flex justify-content-around px-3">
-			<a href="#"><i class="bi bi-house"></i> Trang chủ</a>
-			<a href="#"><i class="bi bi-phone"></i> iPhone</a>
-			<a href="#"><i class="bi bi-laptop"></i> Laptop</a>
-			<a href="#"><i class="bi bi-diagram-3"></i> Phụ kiện</a>
-			<a href="#"></i> Liên hệ</a>
-		</div>
-	</div>
+  <div class="navbar navbar-dark bg-dark py-3">
+    <div class="css_navbar container d-flex justify-content-around px-3">
+		<a th:href="@{/home}"><i class="bi bi-house"></i> Trang chủ</a>
+		<a th:href="@{/home(categoryId=1)}"><i class="bi bi-phone"></i> Điện thoại</a>
+		<a th:href="@{/home(categoryId=2)}"><i class="bi bi-laptop"></i> Laptop</a>
+		<a th:href="@{/home(categoryId=3)}"><i class="bi bi-diagram-3"></i> Phụ kiện</a>
+		<a th:href="@{/contact}"><i class="bi bi-telephone-inbound-fill"></i> Liên hệ</a>
+    </div>
+  </div>
 </nav>

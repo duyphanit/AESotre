@@ -15,22 +15,25 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+@Data
 @Entity
 @Table(name = "Product")
-@Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Product implements Serializable {
+public class Product implements Serializable{
+
+	private static final long serialVersionUID = 1L;
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private String productID;
+	private Long productID;
 
 	private String productName;
 	private Double firstPrice;
 	private String images;
 
 	@ManyToOne
-	@JoinColumn(name = "categoryID")
+	@JoinColumn(name = "category_ID")
 	private Category category;
 
 	@OneToMany(mappedBy = "product")
