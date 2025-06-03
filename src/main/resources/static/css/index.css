@@ -2,13 +2,17 @@ body {
 	overflow-x: hidden;
 }
 
-
-.navbar {
-	background-color: rgba(22, 148, 74, 0.715);
+.title-header{
+/*	font-family: 'Yellowtail', cursive; */
+	font-family: 'Yellowtail', cursive;
+	font-size: 50px;
+	font-weight: bolder;
+	color: white;
 }
 
-.search-bar {
-	width: 100%;
+.bg-header {
+	/*background-color: rgba(22, 148, 74, 0.715);*/
+	background-image: url('https://cdn2.fptshop.com.vn/unsafe/1920x0/filters:format(webp):quality(75)/Background_gia_online_D_5495023a1c.png');
 }
 
 .cart-badge {
